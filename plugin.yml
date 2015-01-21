@@ -1,0 +1,28 @@
+name: Lumberjack
+main: com.github.y120.bukkit.lumberjack.Lumberjack
+version: 0.1
+description: Fells trees by hitting the bottom block.
+
+author: y120
+
+permissions:
+    lumberjack.*:
+        description: Gives access to all lumberjack commands and features
+        children:
+            lumberjack.timber: true
+            lumberjack.toggle: true
+            lumberjack.check: true
+    lumberjack.timber:
+        description: Destroys trees when bottom block is destroyed.
+        default: true
+    lumberjack.toggle:
+        description: Globally toggles whether trees may be felled.
+        default: op
+    lumberjack.check:
+        description: Checks whether trees may be felled.
+        default: true
+commands:
+    lumberjack:
+        description: Lumberjack main command
+        usage: with no arguments, check; with "toggle", toggle
+        aliases: [lj]
